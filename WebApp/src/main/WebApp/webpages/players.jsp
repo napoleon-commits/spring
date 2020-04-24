@@ -7,9 +7,6 @@
 <title>Napoleon</title>
 </head>
 <body>
-	Top Players:
-	1. Magnus
-	2. Ding Liren
-	3. Bobby Fischer
+	Welcome to Napoleon // ${playername}
 </body>
 </html>
