@@ -7,11 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>View Customer Details</h1>
-	<h2>Details as submitted as follows: </h2>
-	<form action="getdetails" method="post">
-		<input type="number" name="pid"/>
-		<input type="submit" value="Submit"/>
-	</form>
+	<h1>Retrieve Customer Details</h1>
+	<h2>Details as submitted as follows</h2>
+	<h5>${players}</h5>
 </body>
 </html>
