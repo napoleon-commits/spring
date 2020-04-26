@@ -5,16 +5,25 @@
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+
+	<bean id="elo" class="com.commits.napoleon.Elo">
+		<property name="rating" value="1200"/>
+		<property name="previousRating" value="1100"/>
+		<property name="projectedRating" value="1300"/>
+	</bean>
+
     <!-- bean definitions here -->
-	<bean id="player1" class="com.commits.napoleon.Player">
+	<bean id="player1" class="com.commits.napoleon.Player" init-method="myInit" destroy-method="myDestroy">
 		<property name="pid" value="1"/>
 		<property name="pname" value="Bobby Fischer"/>
 		<property name="popening" value="King's Opening"/>
+		<!-- <constructor-arg ref="elo"></constructor-arg> -->
+		<property name="e" ref="elo" />
 	</bean>
 	
-	<bean id="player2" class="com.commits.napoleon.Player">
+	<!-- <bean id="player2" class="com.commits.napoleon.Player">
 		<property name="pid" value="2"/>
 		<property name="pname" value="Gary Kasporov"/>
 		<property name="popening" value="Queen's Gambit"/>
-	</bean>
+	</bean> -->
 </beans>
